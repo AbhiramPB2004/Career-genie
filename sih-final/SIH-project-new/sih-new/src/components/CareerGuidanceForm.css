@@ -1,0 +1,34 @@
+/* CareerGuidanceForm.css */
+
+.formContainer {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .questionContainer {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .questionText {
+    margin-bottom: 10px;
+  }
+  
+  /* Style RadioGroup and FormControlLabel */
+  .MuiFormControlLabel-root {
+    display: flex;
+    justify-content: space-between; /* Align label and radio button to the right */
+  }
+  
+  .MuiRadio-root {
+    padding: 4px; /* Adjust radio button padding */
+  }
+  
