@@ -1,0 +1,28 @@
+version: "1.0"
+services:
+  mongo_sih:
+    image: mongo:latest
+    container_name: mongo_sih
+    restart: always
+    ports:
+      - "200:27017"
+    volumes:
+      - mongo_sih:/data/db
+    
+  backend_api:
+    build: .
+    ports:
+      - "3001:3001"
+    environment:
+      MongoDB: mongodb://mongo_sih:27017/sih
+      JWT_SECRET_KEY : 768c6580205c9b16145b6d111dd1a4c2a33c73235a7ebd54d4d72995f58ea8847d1f17f23e99e9986628942cc8a938823d1301a690f73885f886043ed14fd959
+      CHAT_GPT_KEY : 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
+    depends_on:
+      - mongo_sih
+  
+volumes:
+  mongo_sih: {} #empty volume
+    
+
+
+  
